@@ -1,12 +1,24 @@
-# React + Vite
+# Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive Quiz App built with React + Vite. It shows one question at a time with four options, tracks score, and provides a results page with per-question breakdown. It supports loading questions from the Open Trivia DB API or a local `questions.json` file.
 
-Currently, two official plugins are available:
+## Features
+- One question at a time, 4 options
+- Next / Previous / Finish
+- Progress indicator and 30s timer (auto-locks answer)
+- Score tracking and Results summary (your vs correct answer)
+- Restart capability
+- Local high score via localStorage
+- API or Local JSON toggle
+- React Router (`/quiz`, `/results`)
+- Loading and error states, responsive design, accessible controls
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 1) Create the project folder and install deps
+npm create vite@latest quiz-app -- --template react
+cd quiz-app
+# replace generated files with the ones from this repo (package.json, src/, index.html, etc.)
+npm install
 
-## Expanding the ESLint configuration
+# 2) Run
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
